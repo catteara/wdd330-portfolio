@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Team Activity</title>
+        <script>
+            function read() {
+                let text = document.getElementById("textarea1").value;
+                document.getElementById("display1").innerHTML = text;
+            }
+            function sum() {
+                let number = document.getElementById("textarea2").value;
+                let sum = 0;
+                for (let i = 1; i <= number; i++) {
+                    sum += i;
+                }
+                document.getElementById("display2").innerHTML = sum;
+            }
+            function add() {
+                let x = Number(document.getElementById("textarea3").value);
+                let y = Number(document.getElementById("textarea4").value);
+                let total = x + y;
+                document.getElementById("display3").innerHTML = total;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Team Activity</h1>
+        <h2>Step 1</h2>
+        <textarea id="textarea1" name="text" cols="40"></textarea>
+        <button type="button" onclick="read()">Display Your Text</button>
+        <section id="display1"></section>
+
+        <h2>Step 2</h2>
+        <textarea id="textarea2" name="text" cols="40"></textarea>
+        <button type="button" onclick="sum()">Summing Your Number</button>
+        <section id="display2"></section>
+
+        <h2>Step 3</h2>
+        <textarea id="textarea3" name="text" cols="40"></textarea>
+        <button type="button" onclick="add()">+</button>
+        <textarea id="textarea4" name="text" cols="40"></textarea>
+        <section id="display3"></section>
+    </body>
+</html>
