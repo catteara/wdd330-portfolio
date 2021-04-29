@@ -23,24 +23,52 @@
                 let total = x + y;
                 document.getElementById("display3").innerHTML = total;
             }
+            function subtract() {
+                let x = Number(document.getElementById("textarea5").value);
+                let y = Number(document.getElementById("textarea6").value);
+                let total = x - y;
+                document.getElementById("display4").innerHTML = total;
+            }
+            function multiply() {
+                let x = Number(document.getElementById("textarea5").value);
+                let y = Number(document.getElementById("textarea6").value);
+                let total = x * y;
+                document.getElementById("display4").innerHTML = total;
+            }
+            function divide() {
+                let x = Number(document.getElementById("textarea5").value);
+                let y = Number(document.getElementById("textarea6").value);
+                let total = x / y;
+                document.getElementById("display4").innerHTML = total;
+            }
         </script>
     </head>
     <body>
         <h1>Team Activity</h1>
-        <h2>Step 1</h2>
+        <h2>Core Requirements</h2>
+        <h3>Step 1- Display Text</h3>
         <textarea id="textarea1" name="text" cols="40"></textarea>
         <button type="button" onclick="read()">Display Your Text</button>
         <section id="display1"></section>
 
-        <h2>Step 2</h2>
+        <h3>Step 2- Summing Up</h3>
         <textarea id="textarea2" name="text" cols="40"></textarea>
         <button type="button" onclick="sum()">Summing Your Number</button>
         <section id="display2"></section>
 
-        <h2>Step 3</h2>
+        <h3>Step 3- Adding</h3>
         <textarea id="textarea3" name="text" cols="40"></textarea>
         <button type="button" onclick="add()">+</button>
         <textarea id="textarea4" name="text" cols="40"></textarea>
+        <section id="display3"></section>
+
+        <h2>Stretch Goals</h2>
+        <h3>Step 1- Subtraction, Multiplacation, and Division </h3>
+        <textarea id="textarea5" name="text" cols="40"></textarea>
+        <button type="button" onclick="subtract()">-</button>
+        <button type="button" onclick="multiply()">*</button>
+        <button type="button" onclick="divide()">/</button>
+        <textarea id="textarea6" name="text" cols="40"></textarea>
         <section id="display3"></section>
     </body>
 </html>

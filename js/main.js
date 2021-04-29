@@ -23,6 +23,4 @@ for (let i = 0; i < links.length; i++ ) {
 }
 text += "</ul>";
 
-
-
 document.getElementById("toc").innerHTML = text;
