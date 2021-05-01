@@ -11,29 +11,175 @@
         <hr>
         <div>
             <h3>Programming Basics</h3>
-            <p></p>
+            <p>Comments</p>
                 <ul>
-                    <li></li>
+                    <li>//Short comment</li>
+                    <li>/*Long comment*/</li>
                 </ul>
-            <p></p>
+            <p>Reserved words</p>
                 <ul>
-                    <li></li>
+                    <li>abstract, await, boolean, break, byte, case, catch, char, class, const, continue, debugger, default, delete, do, double, else, enum, export, extends, false, final, finally, float, for, function, goto, if, implements, import, in instanceof, int, interface, let, long, native, new, null, package, private, protected, public, return, short, static, super, switch, synchronized, this, throw, throws, transient, true, try, typeof, var, volatile, void, while, with, yield</li>
                 </ul>
+            <p>Not Reserved, but treat them like they are</p>
+                <ul>
+                    <li>Undefined</li>
+                    <li>NaN</li>
+                    <li>Infinity</li>
+                </ul>
+            <p>Primitive Data Types</p>
+                <ul>
+                    <li>String</li>
+                    <li>Symbol</li>
+                    <li>Number</li>
+                    <li>Boolean</li>
+                    <li>Undefined</li>
+                    <li>Null</li>
+                    <li>Any values that is not one of the listed types above, is an object</li>
+                    <li>Use typeof operator to find out which</li>
+                </ul>
+            <p>Variables</p>
+                <ul>
+                    <li>A value stored in memory</li>
+                    <li>(let, const, or var) = value;</li>
+                    <li>Const does not allow you to reassign a variable to another value.</li>
+                    <li>Using const to declare the majority of your variables can help to avoid bugs</li>
+                    <li>Var is outdated, if you aren’t using const, use let</li>
+                </ul>
+            <p>Scope</p>
+                <ul>
+                    <li>Const and let are both block scoped</li>
+                    <li>Global Scope</li>
+                        <ul>
+                            <li>Any variable declared outside of a block</li>
+                            <li>It is accessible anywhere in the program</li>
+                            <li>Keep global variables to a minimum to avoid overwriting</li>
+                        </ul>
+                    <li>Local Scope</li>
+                        <ul>
+                            <li>Blocks can be created to create Local Scope	</li>
+                            <li>Put blocks within {}</li>
+                        </ul>
+                </ul>
+            <p>Naming Variables</p>
+                <ul>
+                    <li>Avoid starting variables with $ and _ to avoid issues with library</li>
+                    <li>Names are case sensitive</li>
+                    <li>camelCaseIsProbablyBetter but underscore_is_ also_an_option</li>
+                        <ul>
+                            <li>Be Consistent!</li>
+                        </ul>
+                </ul>
+            <p>Backslash Characters</p>
+                <ul>
+                    <li>Single quotes \’</li>
+                    <li>Double quotes \”</li>
+                    <li>End of line \n</li>
+                    <li>Carriage Return \r</li>
+                    <li>Tab \t</li>
+                    <li>Backslash \\</li>
+                </ul>
+            <p>Symbol() function</p>
+                <ul>
+                    <li>Include description within the ()</li>
+                </ul>
+            <p>Converting Between Strings and Numbers</p>
+                <ul>
+                    <li>String to Number</li>
+                        <ul>
+                            <li>Number() method</li>
+                        </ul>
+                    <li>Number to String</li>
+                        <ul>
+                            <li>String()</li>
+                        </ul>
+                    <li>Parsing Numbers parseInt()</li>
+                        <ul>
+                            <li>Used to convert a string representation af a numeric value, back into a number</li>
+                        </ul>
+                </ul>
+                <p>Logical Operators</p>
+                    <ul>
+                        <li>! Logical Not</li>
+                        <li>&& Logical And</li>
+                        <li>|| Logical Or</li>
+                    </ul>
+                <p>Comparison</p>
+                    <ul>
+                        <li>== Soft Equity</li>
+                        <li>=== Hard Equity (True and Same Data Type)</li>
+                    </ul>
         </div>
         <hr>
         <div>
             <h3>Arrays, Logic, and Loops</h3>
-            <p></p>
+            <p>Array</p>
                 <ul>
-                    <li></li>
+                    <li>An unordered list of values.</li>
                 </ul>
+            <p>Array Properties and Methods</p>
+                <ul>
+                    <li>length- used to find the length of an array.</li>
+                    <li>pop()- removes the last item from an array.</li>
+                    <li>shift()- removes the first item in an array.</li>
+                    <li>push()- appends a new value to the end of the array.</li>
+                    <li>unshift()- appends a new item to the beginning of the array.</li>
+                    <li>concat()- merge an array with one or more arrays.</li>
+                    <li>join()- turn array into a string that comprises all the items and seperates them with commas.</li>
+                    <li>slice()- creates a subarray.</li>
+                    <li>splice()- removes items from an array than inserts new items in their place.</li>
+                    <li>reverse()- reverses the order of an array.</li>
+                    <li>sort()- sorts by alphabetical order (default). This changes the order permanently.</li>
+                    <li>indexOf('value')- finds the first occurence of a value in an array.</li>
+                    <li>includes('value')- returns boolean value if the value occures or not.</li>
+                </ul>
+            <p>Sets</p>
+                <ul>
+                    <li>A data structure that represents a collection of unique values.</li>
+                </ul>
+            <p>Logic</p>
+                <ul>
+                    <li>if</li>
+                    <li>else</li>
+                    <li>switch</li>
+                </ul>
+            <p>Loops</p>
+                <ul>
+                    <li>while</li>
+                    <li>do...while</li>
+                    <li>for</li>
+                </ul>    
+
         </div>
         <hr>
         <div>
             <h3>Functions</h3>
-            <p></p>
+            <p>Function</p>
                 <ul>
-                    <li></li>
+                    <li>A chunk of code that can be referenced by a name, and it is almost like a small, self-contained miniprogram</li>
+                </ul>
+            <p>Defining a Function</p>
+                <ul>
+                    <li>funtion declaration(){code}</li>
+                    <li>function expression- assigns an anonymous function(function that doesn't have a name) to a variable.</li>
+                    <li>invoking a function- declaration();</li>
+                </ul>
+            <p>DRY</p>
+                <ul>
+                    <li>Dont Repeat Yourself.</li>
+                    <li>Every part of your program should only be written once.</li>
+                </ul>
+            <p>Arrow Functions</p>
+                <ul>
+                    <li>example: const square = x => x*x;</li>
+                    <li>easily identifiable by "=>" symbols</li>
+                    <li>Arrow Function Advantages</li>
+                        <ul>
+                            <li>less verbose</li>
+                            <li>don't need to be put into parentheses</li>
+                            <li>if it is only one line, it doesn't need to be inside a block</li>
+                            <li>return keyword isn't required</li>
+                            <li>don't bind their own value of this to the function</li>
+                        </ul>  
                 </ul>
         </div>
     </body>
