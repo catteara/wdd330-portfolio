@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+</head>
+
+<body>
+    <h1>Notes</h1>
+    <h2>Preparation</h2>
+    <hr>
+    <div>
+        <h3>Object methods, &ldquo;this&rdquo;</h3>
+        <ul>
+            <li>Methods- Functions stored in object properties</li>
+            <li>Methods are referenced using &ldquo;this&rdquo; keyword</li>
+            <li>&ldquo;This&rdquo; has no value until the function is called</li>
+            <li>Arrow functions =&gt; do not have a &ldquo;this&rdquo;</li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h3>Chapter 5: Objects</h3>
+        <ul>
+            <li>Object Literals&nbsp;</li>
+            <ul>
+                <li>Object- is a self-contained set of related values and functions.</li>
+                <li>Method- When a property&rsquo;s value is a function</li>
+                <li>Object Literal- an object created directly in the languages by wrapping all its properties and
+                    methods in curly braces{}</li>
+                <ul>
+                    <li>Allow objects to be created quickly w/o the need for defining a class</li>
+                    <li>Way to organize your code</li>
+                </ul>
+            </ul>
+            <li>Creating ObjectsEmpty Variable Example</li>
+            <ul>
+                <li>Const spiderman = {};</li>
+            </ul>
+            <ul>
+                <li>Using a constructor function example (empty)</li>
+                <ul>
+                    <li>Const spiderman = new Object();</li>
+                    <li>Not Recommended</li>
+                </ul>
+                <li>Accessing Properties examples</li>
+                <ul>
+                    <li>Superman.name</li>
+                    <ul>
+                        <li>More common</li>
+                    </ul>
+                    <li>Superman[&lsquo;name&rsquo;]</li>
+                    <ul>
+                        <li>Only way to access nonstandard property and method names (Names that don&rsquo;t follow the
+                            variable rules)</li>
+                        <li>Let&rsquo;s you evaluate an expression and use it as the property key</li>
+                    </ul>
+                </ul>
+                <li>Checking if properties or methods exist examples</li>
+                <ul>
+                    <li>&lsquo;City&rsquo; in Superman; &gt;&gt;false</li>
+                    <li>Superman.city !== undefined; &gt;&gt;false</li>
+                    <li>Superman.hasOwnProperty(&lsquo;city&rsquo;); &gt;&gt;false</li>
+                    <li>Superman.hasOwnProperty(&lsquo;name&rsquo;); &gt;&gt;true</li>
+                </ul>
+            </ul>
+            <li>Nested Objects</li>
+            <ul>
+                <li>Keyword this</li>
+                <ul>
+                    <li>Refers to the object that is within</li>
+                    <li>Example</li>
+                    <ul>
+                        <li>Const dice = { sides:6, roll() { return Math.floor(this.sides * Math.random()) + 1; }}</li>
+                    </ul>
+                </ul>
+            </ul>
+            <li>Namespacing</li>
+            <ul>
+                <li>Object Literal Pattern&nbsp;</li>
+                <ul>
+                    <li>Use to create a namespace for groups</li>
+                    <li>Create an object literal that serves as the namespace, then ass any values as properties and any
+                        functions as methods</li>
+                </ul>
+            </ul>
+            <li>Built-in Objects</li>
+            <ul>
+                <li>JSON (JavaScript Object Notation)</li>
+                <li>Math Object</li>
+                <li>Date Object</li>
+                <li>RegExp Object</li>
+            </ul>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h3>Chapter 6: The Document Object Model</h3>
+        <ul>
+            <li>DOM (Document Object Model)</li>
+            <ul>
+                <li>Represents an HTML document as a network of connected nodes that form a tree-like structure.</li>
+                <li>Treats everything on a web page as a node.</li>
+                <li>The HTML tag is the root tag and everything else is a child of this tag.</li>
+                <li>Not actually part of JavaScript, it is a language agnostic.</li>
+                <li>Can be used in any programming language.</li>
+                <li>Used in JavaScript to access and modify different parts using built-in object, document.]</li>
+            </ul>
+            <li>Legacy DOM Shortcut Methods</li>
+            <ul>
+                <li>Document.body - returns the body element of web page</li>
+                <li>Document.images - returns a node list of all the images contained in the document</li>
+                <li>Document.links - returns a node list of all &lsquo;&lt;a&gt;&rsquo; elements and
+                    &lsquo;&lt;area&gt;&rsquo; elements that have a href attribute</li>
+                <li>Document.anchors - returns node list of all &lsquo;&lt;a&gt;&rsquo; elements that have a name
+                    attribute</li>
+                <li>Document.forms - returns node list of all forms in document&nbsp;</li>
+            </ul>
+            <li>Node lists are not arrays</li>
+            <li>Getting an Element</li>
+            <ul>
+                <li>By ID - .getElementById(&lsquo;title&rsquo;);</li>
+                <li>By Tag Name - .getElementsByTagName(&lsquo;li&rsquo;);</li>
+                <li>By Class Name- .getElementsByClassName(&lsquo;hero&rsquo;);</li>
+            </ul>
+            <li>Query Selectors</li>
+            <ul>
+                <li>.querySelector(&lsquo;&rsquo;) method allows you to use CSS notation to find the
+                    &lt;strong&gt;first&lt;/strong&gt; element in the document that matches a CSS selector. If no
+                    matches, null.</li>
+            </ul>
+            <li>Setting an Elements Attribute Example&nbsp;</li>
+            <ul>
+                <li>WonderWoman.setAttribute(&lsquo;class&rsquo;,&rsquo;villain&rsquo;); &lt;&lt;undefined</li>
+                <li>WonderWoman .getAttribute(&lsquo;class&rsquo;); &lt;&lt; &ldquo;villain&rdquo;</li>
+            </ul>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <h3>Chapter 7: Events</h3>
+        <ul>
+            <li>Common Types of Events</li>
+            <ul>
+                <li>Mouse Events - mouseover(sounds like hover in CSS), mousedown, mouseup, click, dblclick (don&rsquo;t
+                    use click and dblclick on the same element)</li>
+                <li>Keyboard Events - keydown, keypress, keyup (Keep modifier keys in mind)</li>
+                <li>Touch Events - touchstart, touchend, touchmove, touchenter, touchleave, touchcancel (No swipe, use
+                    combo of start, move, and leave). Touch Events are Complex.&nbsp;</li>
+            </ul>
+        </ul>
+    </div>
+</body>
+
+</html>
