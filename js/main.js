@@ -22,6 +22,14 @@ const links = [
     {
         label: "Week Three Code",
         url: "week3/code.html"
+    },
+    {
+        label: "Week Four Notes",
+        url: "week4/notes.html"
+    },
+    {
+        label: "Week Four Code",
+        url: "week4/code.html"
     }
 ]
 
@@ -32,3 +40,4 @@ for (let i = 0; i < links.length; i++ ) {
 text += "</ul>";
 
 document.getElementById("toc").innerHTML = text;
+

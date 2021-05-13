@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat&display=swap');
+html {
+    background: #F4F6F6;
+    color: #1E0B0E;
+    margin: auto;
+    max-width: 800px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Berkshire Swash', serif;
+}
+
+a {
+    color: #3B5768;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #BA2637;
+    text-decoration: underline;
+}
+
+header, footer {
+    background-color: #3B5768;
+    color: #F4F6F6;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #F4F6F6;
+    padding: 10px 5px;
+}
+
+footer a:hover {
+    background-color: #BA2637;
+    color: #F4F6F6;
+}
+

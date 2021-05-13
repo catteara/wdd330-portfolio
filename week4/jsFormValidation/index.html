@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Form Validation with JavaScript">
+    <title>Form</title>
+    <link rel="stylesheet" href="../css/normalize.css" media="screen">
+    <link rel="stylesheet" href="../../css/small.css" media="screen">
+    <script defer src="script.js"></script>
+    <style> 
+        /*Embedded CSS is used, since it is a project for just this week.*/
+        input, div, button {
+            padding: 10px;
+            display: block;
+        }
+        button {
+            margin: 10px;
+            width: 120px;
+        }
+        form {
+            border: 3px solid #a6cbed;
+            max-width: 300px;
+            margin: auto;
+        }
+        #error {
+            text-align: center;
+        }
+        p {
+            padding-top: 20px;
+            max-width: 300px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="error"></div>
+    <form id="form" action="thanks.html" method="GET">
+        <div>
+            <label>Name<input id="name" name="name" type="text"></label>
+        </div>
+        <div>
+            <label>Password<input id="password" name="password" type="password"></label>
+        </div>
+        <div>
+            <label>Re-type Password<input id="passwordCheck" name="passwordCheck" type="password"></label>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <p>A button with the type of submit will submit, unless it is stated otherwise in the JavaScript. A button with a type of button won't do anything by default, so if you want the button to submit the form you will have to assign that in JavaScript.</p>
+</body>
+</html>
