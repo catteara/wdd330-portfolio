@@ -1,0 +1,88 @@
+html {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    
+}
+
+#ttt {
+    display: grid;
+    grid-template-columns: 150px 153px 150px;
+    grid-template-rows: 150px 153px 150px;
+    gap: 0;
+}
+
+.ttt {
+    width: 147px;
+    height: 147px;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ttt:hover {
+    background-color: #d7dde0;
+    transition: .3s;
+}
+
+.topLeft {
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.topMiddle {
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+}
+
+.topRight {
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+}
+
+.middleLeft {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.middle {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+}
+
+.middleRight {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+}
+
+.bottomLeft {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+}
+
+.bottomMiddle {
+    border-top: 3px solid black;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+}
+
+.bottomRight {
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    width: 453px;
+}
+
+#reset {
+    margin: 20px;
+}

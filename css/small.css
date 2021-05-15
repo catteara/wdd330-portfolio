@@ -38,3 +38,15 @@ footer a:hover {
     color: #F4F6F6;
 }
 
+button {
+    background-color: #3B5768;
+    color: #F4F6F6;
+    border: none;
+    max-width: 200px;
+    padding: 10px 35px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #BA2637;
+}
