@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Notes for Week 04, focuses on chapter 8, 12, and part of 15 from JavaScript Novice to Ninja.">
+    <title>Notes</title>
+    <link rel="stylesheet" href="../css/normalize.css" media="screen">
+    <link rel="stylesheet" href="../css/small.css" media="screen">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+</head>
+<!--This page has trouble validating in HTML because of my nested lists.-->
+<body>
+    <h1>Notes</h1>
+    <h2>Preparation</h2>
+    <hr>
+    <p>Chapter 10: Testing and Debugging</p>
+<ul>
+<li>Errors, Exceptions, and Warnings</li>
+<ul>
+<li>Errors are caused when something goes wrong in a program. Three Types usually.</li>
+<ul>
+<li>System Error- Problem with the system or external devices that the program is interacting with.</li>
+<li>Programmer Error- Program contains incorrect syntax or faulty logic or a typo.</li>
+<li>User Error- Data incorrectly added by user, which the program can&rsquo;t handle.</li>
+</ul>
+<li>Exceptions</li>
+<ul>
+<li>An error that produces a return value that can then be used by the program to deal with the error</li>
+<li>Stack Trace- A sequence of functions or method calls that lead to the point where the error occured.</li>
+</ul>
+<li>Warnings</li>
+<ul>
+<li>Occurs if there is an error in the code, but it isn&rsquo;t enough to crash the program.&nbsp;</li>
+<li>The program will continue to run incorrectly</li>
+</ul>
+</ul>
+<li>The Importance of Testing and Debugging</li>
+<ul>
+<li>Text your code rigorously, ensure you are not letting your JavaScript fail silently.</li>
+</ul>
+<li>Strict Mode</li>
+<ul>
+<li>Considers coding practices that were previously &ldquo;poor style&rdquo; as actual errors</li>
+<li>Can also improve code clarity and speed</li>
+<li>Strict mode is recommended</li>
+<li>First line of JavaScript file: &ldquo; &lsquo;use strict&rsquo;; &ldquo;</li>
+<li>Linting Tools- used to test the quality of JavaScript code. They call out sloppy programming practices and syntax errors.</li>
+<li>Feature Detection- making an if statement to check if something is supported</li>
+</ul>
+<li>Debugging in the Browser</li>
+<ul>
+<li>Finding where bugs are in the code.</li>
+<li>The Trusty Alert- alert(), because it stops a program at certain points, so you can check what&rsquo;s being returned.</li>
+<li>Using the Console- console.log() which will return in the console.</li>
+<li>Debugging Tools- debugger; keyword creates a break point in the code that will pause the code.</li>
+<li>Remove any code that was just for debugging before &ldquo;shipping&rdquo;</li>
+</ul>
+<li>Error Objects</li>
+<ul>
+<li>Const error = new Error(&lsquo;Oops something went wrong!&rsquo;);</li>
+<li>EvalError- not used currently</li>
+<li>RangeError- when a number is outside an allowable range of values.</li>
+<li>ReferenceError- reference is made to an item that doesn&rsquo;t exist.</li>
+<li>SyntaxError- Error in the syntax.</li>
+<li>TypeError- Error in the type of value used (a string used when a number is expected)</li>
+<li>URIEroor- Problem encoding or decoding the URI</li>
+<li>InternalError- non-standard. When an error occurs in the JavaScript engine.</li>
+<li>All of the above can also be used as a constructor to create custom error objects</li>
+</ul>
+<li>Throwing Exceptions</li>
+<ul>
+<li>Manually thrown excpetions, use throw statement.</li>
+<li>Causes the execution of the code to stop</li>
+<li>Best Practice- Throw an error object (throw new Error();)</li>
+</ul>
+<li>Exception Handling</li>
+<ul>
+<li>Exception occurs then program terminates with error message</li>
+<li>Ideal in development, not great for production</li>
+<li>Try, catch, and finally blocks</li>
+<li>Do lots of testing, using functions</li>
+<li>Test Driven Development (TDD)- Considered Best Practice</li>
+<ul>
+<li>Write Tests the Intially fail</li>
+<li>Write code to pass the tests</li>
+<li>Refractor the Code</li>
+<li>Test the refractories Code</li>
+<li>Write more tests for new features&nbsp;</li>
+</ul>
+</ul>
+<li>Testing Frameworks</li>
+<ul>
+<li>Jest- TDD framework</li>
+</ul>
+</ul>
+</body>
+
+</html>

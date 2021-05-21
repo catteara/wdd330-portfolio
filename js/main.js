@@ -1,5 +1,4 @@
-const links = [
-    {
+const links = [{
         label: "Week One Notes",
         url: "week1/notes.html"
     },
@@ -30,14 +29,21 @@ const links = [
     {
         label: "Week Four Code",
         url: "week4/code.html"
+    },
+    {
+        label: "Week Five Notes",
+        url: "week5/notes.html"
+    },
+    {
+        label: "Week Five Code",
+        url: "week5/code.html"
     }
 ]
 
 text = '<ul>';
-for (let i = 0; i < links.length; i++ ) {
+for (let i = 0; i < links.length; i++) {
     text += "<li><a href='" + links[i].url + "'>" + links[i].label + "</a></li>"
 }
 text += "</ul>";
 
 document.getElementById("toc").innerHTML = text;
-
