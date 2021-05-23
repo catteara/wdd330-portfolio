@@ -16,9 +16,13 @@ a {
     text-decoration: none;
 }
 
-a:hover{
+li:hover a{
     color: #BA2637;
     text-decoration: underline;
+}
+
+#toc ul li {
+    padding: 14px 0;
 }
 
 header, footer {
@@ -50,3 +54,4 @@ button {
 button:hover {
     background-color: #BA2637;
 }
+
