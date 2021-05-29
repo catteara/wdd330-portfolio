@@ -1,7 +1,7 @@
 .newItemEntry {
     position: sticky;
-    top: 0;
-    margin-bottom: 1rem;
+    bottom: 0;
+    margin-top: 1rem;
     padding: 0.75rem;
 
     form {
@@ -18,8 +18,9 @@
             font-size: 1.25rem;
             border: 2px solid $textbox-bordercolor;
             border-radius: 10px;
-            padding: 0.75;
+            padding: 0.75rem;
             outline: none;
+            
         }
 
         input[type="text"]:focus,
