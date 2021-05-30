@@ -75,13 +75,15 @@ const renderList = () => {
 
 const buildListItem = (item) => {
     const div = document.createElement("div");
-    div.className= "item";
+    div.className = "item";
     const check = document.createElement("input");
     check.type = "checkbox";
     check.id = item.getId();
     check.tabIndex = 0;
     addClickListenerToCheckbox(check);
     const label = document.createElement("label");
+    label.className = "item draggable";
+    label.setAttribute('draggable', 'true'); //Added for feature
     label.htmlFor = item.getId();
     label.textContent = item.getItem();
     div.appendChild(check);
@@ -149,6 +151,48 @@ const createNewItem = (itemId, itemText) => {
     return toDo;
 };
 
-const updateScreenReaderConfirmation= (newEntryText, actionVerb) => {
+const updateScreenReaderConfirmation = (newEntryText, actionVerb) => {
     document.getElementById("confirmation").textContent = '${newEntryText} ${actionVerb}.';
 };
+
+//Drag and Drop Feature. Attempted multiple tutorials. Unfortunately I was unable to get it to work properly.
+
+// const draggables = document.querySelectorAll('.draggable');
+// const containers = document.querySelectorAll('.container');
+
+// draggables.forEach(draggable => {
+//     draggables.forEach(draggable => {
+//         draggable.addEventListener('dragstart')
+//     })
+
+//     draggable.addEventListener('dragend', () => {
+//         draggable.classList.remove('dragging')
+//     })
+// })
+
+// containers.forEach(container => {
+//     container.addEventListener('dragover', e => {
+//         e.preventDefault()
+//         const afterElement = getDragAfterElement(container, e.clientY)
+//         const draggable = document.querySelector('.dragging')
+//         if (afterElement == null) {
+//         container.appendChild(draggable)
+//         } else {
+//             container.insertBefore(draggable, afterElement)
+//         }
+//     })
+// })
+
+// function getDragAfterElement(container, y) {
+//    const draggableElements =  [...container.querySelectorAll('.draggable:not(.dragging)')]
+
+//    return draggableElements.reduce((closest, child) => {
+//     const box = child.getBoundingClientRect()
+//     const offset = y - box.top - box.height / 2 
+//     if (offset < 0 && offset > closest.offset) {
+//         return {offset: offset, element: child}
+//     } else {
+//         return closest
+//     }
+//    }, {offset: Number.POSITIVE_INFINITY}).element
+// } 
