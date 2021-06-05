@@ -1,32 +1,13 @@
-const quiz = [{
-    name: "Superman",
-    realName: "Clark Kent"
-  },
-  {
-    name: "Wonderwoman",
-    realName: "Dianna Prince"
-  },
-  {
-    name: "Batman",
-    realName: "Bruce Wayne"
-  },
-  {
-    name: "The Hulk",
-    realName: "Bruce Banner"
-  },
-  {
-    name: "Spider-man",
-    realName: "Peter Parker"
-  },
-  {
-    name: "Cyclops",
-    realName: "Scott Summers"
-  }
-];
+const url = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/questions.json';
 
-// Utility functions
+fetch(url)
+  .then(res => res.json())
+  .then(quiz => {
+    view.start.addEventListener('click', () => game.start(quiz.questions), false);
+    view.response.addEventListener('click', (event) => game.check(event), false);
+  });
+
 function random(a, b = 1) {
-  // if only 1 argument is provided, we need to swap the values of a and b
   if (b === 1) {
     [a, b] = [b, a];
   }
@@ -40,7 +21,6 @@ function shuffle(array) {
   }
 }
 
-// View Object
 const view = {
   score: document.querySelector('#score strong'),
   question: document.querySelector('#question'),
@@ -82,7 +62,7 @@ const view = {
 
 const game = {
   start(quiz) {
-    console.log('start() invoked'); //W05 Debugging
+    console.log('start() invoked');
     this.score = 0;
     this.questions = [...quiz];
     view.setup();
@@ -98,7 +78,7 @@ const game = {
     }
   },
   ask(name) {
-    console.log('ask() invoked'); //W05 Debugging
+    console.log('ask() invoked');
     if (this.questions.length > 2) {
       shuffle(this.questions);
       this.question = this.questions.pop();
@@ -112,16 +92,18 @@ const game = {
     }
   },
   check(event) {
-    console.log('check(event) invoked'); //W05 Debugging
+    console.log('check(event) invoked');
     const response = event.target.textContent;
     const answer = this.question.realName;
     if (response === answer) {
+      console.log('correct');
       view.render(view.result, 'Correct!', {
         'class': 'correct'
       });
       this.score++;
       view.render(view.score, this.score);
     } else {
+      console.log('wrong');
       view.render(view.result, `Wrong! The correct answer was ${answer}`, {
         'class': 'wrong'
       });
@@ -129,12 +111,9 @@ const game = {
     this.ask();
   },
   gameOver() {
-    console.log('gameOver() invoked'); //W05 Debugging
+    console.log('gameOver() invoked');
     view.render(view.info, `Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
     view.teardown();
     clearInterval(this.timer);
   }
 }
-
-view.start.addEventListener('click', () => game.start(quiz), false);
-view.response.addEventListener('click', (event) => game.check(event), false);

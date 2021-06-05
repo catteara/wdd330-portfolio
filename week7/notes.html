@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Notes for Week 04, focuses on chapter 8, 12, and part of 15 from JavaScript Novice to Ninja.">
+    <title>Notes</title>
+    <link rel="stylesheet" href="../css/normalize.css" media="screen">
+    <link rel="stylesheet" href="../css/small.css" media="screen">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+</head>
+<!--This page has trouble validating in HTML because of my nested lists.-->
+
+<body>
+    <h1>Notes</h1>
+    <h2>Preparation</h2>
+    <hr>
+    <p>Chapter 11: Further Functions</p>
+    <ul>
+        <li>Function Properties and Methods</li>
+        <ul>
+            <li>Functions are first-class objects.means they can have properties and methods.</li>
+            <li>Call and Apply Methods</li>
+            <ul>
+                <li>call() method used to set the value of &ldquo;this&rdquo; inside a function to an object that is
+                    provided as the first argument</li>
+                <li>When the function called requires any parameters, provide these arguments after the first argument.
+                </li>
+                <li>apply() method works the same except the arguments are provided as an array (even if there is only
+                    one argument)</li>
+            </ul>
+            <li>Custom Properties&nbsp;</li>
+            <ul>
+                <li>You can add your own properties to functions like any object in JavaScript</li>
+                <li>Memoization</li>
+                <ul>
+                    <li>Saving the result in a cache property, to get returns quicker</li>
+                </ul>
+            </ul>
+        </ul>
+        <li>Immediately Invoked Functions Expressions (IIFE __ &lsquo;iffy&rsquo;)</li>
+        <ul>
+            <li>Anonymous function that is invoked as soons as it is defined.&nbsp;</li>
+            <li>To do this: put parentheses at the end of the function and definition and around the whole declaration.
+            </li>
+            <li>Use it to perform a task while still keeping variables under control.</li>
+            <li>Temporary Variables cause confusion, use with an IIFE.</li>
+            <li>Initializing Code- Use IIFE if code only needs to be run once.</li>
+            <li>Creates blocks of code</li>
+        </ul>
+        <li>Self-Defining Functions</li>
+        <ul>
+            <li>To do his assign an anonymous function to a variable that has the same name as the function</li>
+        </ul>
+        <li>Recursive Functions</li>
+        <ul>
+            <li>A function that invokes itself until a certain condition is met</li>
+        </ul>
+        <li>Callbacks</li>
+        <ul>
+            <li>Functions passed to other functions as arguments and then invoked within the function they are passed
+                to.</li>
+        </ul>
+        <li>Promises</li>
+        <ul>
+            <li>Represents the future result of an asynchronous operation</li>
+            <li>Don&rsquo;t do anything that can&rsquo;t be achieved with callbacks, but can help simplify the process
+                (and avoid convoluted code that can result if you use multiple callbacks.</li>
+            <li>The Promise Life Cycle&nbsp;</li>
+            <ul>
+                <li>Called, Pending, Settled (Resolved or Rejected)</li>
+            </ul>
+            <li>Creating a promise</li>
+            <ul>
+                <li>Use a constructor function, takes a function (called an executor) as an argument, it initializes the
+                    promise and starts the asynchronous operation. It accepts two functions as arguments: resolve() is
+                    passes, reject() if fails.</li>
+            </ul>
+            <li>Once a promise is settled you can use the then() method to establish the outcome.</li>
+            <li>Chaining Multiple Promises - Each Promise will begin when the previous promise has been settled</li>
+        </ul>
+        <li>Async Functions (async keyword)</li>
+        <ul>
+            <li>Allows you to write asynchronous code like it was synchronous</li>
+            <li>Achieved by using the await operator before an asynchronous function.</li>
+        </ul>
+        <li>Functions that Return Functions</li>
+        <ul>
+            <li>To return a function assign it to a variable</li>
+        </ul>
+        <li>Closures</li>
+        <ul>
+            <li>One of the most powerful JavaScript features</li>
+            <li>A closure is formed when the inner function is returned by the outer function, maintaining access to any
+                variables declared inside the enclosed function.</li>
+        </ul>
+        <li>Introduction to Functional Programming</li>
+        <ul>
+            <li>A programming paradigm.</li>
+            <li>Uses pure functions</li>
+            <ul>
+                <li>Depends only on values provided as arguments&nbsp;</li>
+                <li>No side-effects</li>
+                <li>Given the same arguments the function always returns the same result</li>
+            </ul>
+            <li>Pure function must contain</li>
+            <ul>
+                <li>At least one argument</li>
+                <li>A return value</li>
+            </ul>
+        </ul>
+        <li>Currying</li>
+        <ul>
+            <li>Process that involves partial application of functions&nbsp;</li>
+            <li>A function is curried when not all arguments have been supplied to the function, so it returns another
+                function that retains the arguments provided</li>
+            <li>A final result is only returned once all expected arguments have been provided.</li>
+            <li>Relies on higher-order functions (ex: power() function)</li>
+            <li>Allows you to turn a single function into a series of functions instead</li>
+        </ul>
+    </ul>
+    <p>Chapter 11: Ajax</p>
+    <ul>
+        <li>Clients and Servers</li>
+        <ul>
+            <li>Javascript was designed as a client side scripting language, so it runs locally on the browser.</li>
+            <li>Ajax allows JavaScript to request resources from a server on behalf of the client.</li>
+            <li>A server is required when requesting resources using Ajax (this involves server-side language like PHP,
+                Ruby, Node.js, or .NET)</li>
+        </ul>
+        <li>Communicating with the server using the Fetch API</li>
+        <ul>
+            <li>fetch() method, with the URL of the resource within quotes in the parentheses.&nbsp;</li>
+            <li>Response Interface</li>
+            <ul>
+                <li>Deals with the object that&rsquo;s returned when the promise is fulfilled.</li>
+            </ul>
+            <li>Redirect() method</li>
+            <ul>
+                <li>Used to redirect to another URL.</li>
+            </ul>
+            <li>Responses: text(), blob(), json(), and creating them using constructor function</li>
+            <li>Request Interface&nbsp;</li>
+            <ul>
+                <li>Request objects are created using Request() and the following properties: url, method, headers,
+                    mode, cache, credentials, redirect</li>
+            </ul>
+        </ul>
+        <li>Receiving Data with Ajax</li>
+        <li>Sending Data with Ajax</li>
+        <ul>
+            <li>Usually done with JSON</li>
+        </ul>
+        <li>FormData</li>
+        <ul>
+            <li>FormDate is an instance created using a constructor function.</li>
+            <li>Really useful when a form contains files to upload.</li>
+        </ul>
+    </ul>
+</body>
+
+</html>
