@@ -7,6 +7,24 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
+header {
+    animation: pulse 5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+        background-color: #BA2637;
+      
+    }
+    50% {
+        background-color: #3B5768;
+    }
+    100% {
+        background-color: #BA2637;
+      
+    }
+  }
+
 h1, h2 {
     font-family: 'Berkshire Swash', serif;
 }
