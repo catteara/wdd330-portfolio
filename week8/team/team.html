@@ -6,7 +6,7 @@
   <title>API Exercises | Team Activity</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    main {
+    body {
       border: 5px solid red;
     }
 
@@ -14,16 +14,11 @@
       text-align: center;
     }
 
-    .containers {
+    .container {
       text-transform: capitalize;
     }
 
-    .buttons {
-      position: relative;
-      margin: 0 auto;
-    }
-
-    button {
+    input {
       height: 48px;
       width: 40%;
       margin: 5px 3%;
@@ -32,30 +27,35 @@
       background-color: black;
     }
 
-    a:visited,
-    a {
+    input:visited,
+    input {
       color: white;
       text-decoration: none;
     }
 
-    button:hover,
-    button:hover a {
+    input:hover,
+    input:hover {
       color: black;
       background-color: yellow;
 
+    }
+    #navigate input {
+      height: 48px;
+      width: 48px;
+      border-radius: 25px;
     }
   </style>
 </head>
 
 <body>
-
-  <main>
-    <h1>API Exercise</h1>
-    <div class="containers"></div>
-    <div class="buttons"></div>
-  </main>
-  <script src="fetch.js"></script>
-
+  <h1>Pokemon</h1>
+  <div class="container">
+    <ul id="pokemonData"></ul>
+  </div>
+  <input type="button" value="Previous" id="prev">
+  <input type="button" value="Next" id="next">
+  <div id="navigate"></div>
 </body>
+<script src="fetch.js"></script>
 
 </html>

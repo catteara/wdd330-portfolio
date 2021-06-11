@@ -1,47 +1,47 @@
+const list = document.getElementById("pokemonData")
+const prevB = document.getElementById("prev")
+const nextB = document.getElementById("next")
+var pageURLnext = "";
+var pageURLprev = "";
+var pagelist = 0;
+var navi = document.getElementById("navigate");
 
-const requestURL = 'https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20';
-
-fetch(requestURL)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (jsonObject) {
-        console.table(jsonObject);
-
-        if(jsonObject.previous != null) {
-            let button2 = document.createElement('button');
-            let a2 = document.createElement('a');
-    
-            a2.textContent = "Previous";
-            a2.href = jsonObject.previous;
-    
-            button2.appendChild(a2);
-            
-            document.querySelector('div.buttons').appendChild(button2);
-
+fetch("https://pokeapi.co/api/v2/pokemon/")
+    .then(response => response.json())
+    .then((data) => {
+        pagelist = (Math.ceil(data.count))
+        for (let i = 1; i <= pagelist; i = i + 20) {
+            var num = document.createElement("input")
+            num.setAttribute("type", "button");
+            num.setAttribute("value", i);
+            navi.appendChild(num)
+            num.addEventListener('click', () => fetchData(`https://pokeapi.co/api/v2/pokemon/?offset=${i}`), false)
         }
-
-        let button1 = document.createElement('button');
-        let a1 = document.createElement('a');
-
-        a1.textContent = "Next";
-        a1.href = jsonObject.next;
-
-        button1.appendChild(a1);
-        
-        document.querySelector('.buttons').appendChild(button1);
-
-        for (let i = 0; i < jsonObject.results.length; i++) {
-            let container = document.createElement('ul');
-            let li = document.createElement('li');
-
-           li.textContent = jsonObject.results[i].name;
-
-            container.appendChild(li);
-
-            document.querySelector('div.containers').appendChild(container);
-        }
-
-        
-          
     });
+
+fetchData("https://pokeapi.co/api/v2/pokemon/")
+
+function fetchData(fetchURL) {
+    list.innerHTML = "";
+    if (fetchURL !== null) {
+        fetch(fetchURL)
+            .then(response => response.json())
+            .then((data) => {
+                let obj = Object.entries(data.results);
+                pageURLnext = data.next;
+                pageURLprev = data.previous;
+                obj.forEach(item => {
+                    let lItem = document.createElement("li");
+                    lItem.textContent = item[1].name;
+                    list.appendChild(lItem);
+                })
+            })
+    } else {
+        var lItem = document.createElement("li");
+        lItem.textContent = "No items found";
+        list.appendChild(lItem);
+    }
+}
+prevB.addEventListener('click', () => fetchData(pageURLprev), false);
+nextB.addEventListener('click', () => fetchData(pageURLnext), false);
+
