@@ -12,184 +12,81 @@
     <link rel="shortcut icon" href="../images/favicon.ico">
 </head>
 <!--This page has trouble validating in HTML because of my nested lists.-->
+
 <body>
     <h1>Notes</h1>
     <h2>Preparation</h2>
     <hr>
-    <p>Chapter 8: CSS3 Transforms and Transitions</p>
+    <p>Chapter 9: The Window Object</p>
     <ul>
-        <li>Transforms</li>
+        <li>The Browser Object Model (BOM)</li>
         <ul>
-            <li>The transform property allows you to translate, rotate, scale, and/or skew any element on the page.</li>
-            <li>The value of the transform property is one or more transform function (separated by spaces) that are
-                applied in the order they are listed.</li>
-            <ul>
-                <li>Choose your ordering carefully</li>
-            </ul>
-        </ul>
-        <li>Translation&nbsp;</li>
-        <ul>
-            <li>Allows you to move elements left, right, up, or down (similar to the behavior of position: relative;)
+            <li>A collection of properties and methods that contain information about the browser and computer screen
             </li>
-            <li>When using a translation function, you&rsquo;re moving elements without impacting the flow of the
-                document.</li>
-            <li>A translated element can only be moved relative to its current position.</li>
-            <li>Transforms don&rsquo;t work on inline elements (the solution they used was to change to display:
-                inline-block;)</li>
-        </ul>
-        <li>Scaling</li>
-        <ul>
-            <li>Scale(x,y) function scales an element by the defined factors horizontally then vertically.</li>
-            <li>If only one value is provided it will be used for the x and y.</li>
-            <li>Has no impact on document flow</li>
+            <li>In a browser environment that global object is the window object</li>
+            <li>Dialogs</li>
             <ul>
-                <li>If this is an issue, consider the use of height, width, or font-size.</li>
+                <li>Alert(), confirm(), prompt()</li>
             </ul>
         </ul>
-        <li>Rotation&nbsp;</li>
+        <li>Browser History</li>
         <ul>
-            <li>Rotates an element around the point of origin by a specified angle value</li>
+            <li>Window.history can be used to access the information about any previously visited pages in the current
+                browser session</li>
+            <li>Add .length and you can see how many pages have been visited before the current page.</li>
+            <li>Add .go(#) to the original statement and you can navigate to other viewed pages.</li>
         </ul>
-        <li>Skew</li>
+        <li>Controlling Windows</li>
         <ul>
-            <li>Skew(x,y) function specifies a skew along the x and y axes</li>
-            <li>If there is only one value, the skew will only take place on the x axis</li>
+            <li>Window.open opens another window, for example a pop up</li>
+            <li>Window.screen object contains information about the screen the browser is displayed on&nbsp;</li>
         </ul>
-        <li>Changing the Origin of the Transform</li>
+        <li>Cookies</li>
         <ul>
-            <li>Transform-origin property. Uses the same syntax as background-position property</li>
-        </ul>
-        <li>Transitions&nbsp;</li>
-        <ul>
-            <li>Allows the values of CSS properties to change over times (essentially providing simple animations)&nbsp;
-            </li>
-            <li>CSS transitions are declared along with the regular styles on an element</li>
-            <li>&nbsp;Steps:</li>
+            <li>Small files saved locally</li>
+            <li>They can only be accessed by a web page with the same domain that set them.</li>
+            <li>Create a cookie</li>
             <ul>
-                <li>1. Declare the original state of the elements in the default style declaration.</li>
-                <li>2. Declare the final state of your transitioned element</li>
-                <li>3.Include the transition functions in your default style declaration using the translation
-                    properties (transition-property, transition-duration, transition-timing-function, and
-                    transition-delay)</li>
+                <li>Document.cookie = &hellip;</li>
             </ul>
         </ul>
-        <li>Transition-property&nbsp;</li>
+        <li>Timing Functions</li>
         <ul>
-            <li>Defines the CSS properties of the element that should be transitioned.&nbsp;</li>
-            <li>If you want to transition more than one property comma separate them.</li>
-        </ul>
-        <li>Transition-duration&nbsp;</li>
-        <ul>
-            <li>Sets how long the transition will take to go from default state to transitioned state</li>
-            <li>Seconds (s) or milliseconds(ms)</li>
-            <ul>
-                <li>2s or 200ms is standard</li>
-            </ul>
-        </ul>
-        <li>Transition-timing-function</li>
-        <ul>
-            <li>Let&rsquo;s you control the pace of the transition</li>
-            <li>Common timing functions: linear, ease-in, ease-out, ease-in-out</li>
-        </ul>
-        <li>Transition shorthand&nbsp;</li>
-        <ul>
-            <li>Transition: -property -duration -timing-function -delay;</li>
-            <li>Example&hellip;&nbsp;</li>
-            <ul>
-                <li>transition; transform 0.2s ease-out 50ms;</li>
-            </ul>
-        </ul>
-        <li>Multiple Transitions&nbsp;</li>
-        <ul>
-            <li>Transition properties allow for multiple transitions in one call</li>
-        </ul>
-        <li>Keyframes</li>
-        <ul>
-            <li>To animate an element in CSS, first create a named animation, then attach it to an element in that
-                element&rsquo;s property declaration block.</li>
-            <li>Each key frame looks like its own nested CSS declaration block&nbsp;</li>
-            <li>There are two keyterms &mdash; from and to &mdash; which evaluate to 0% and 100%.</li>
-        </ul>
-        <li>Animation Properties&nbsp;</li>
-        <ul>
-            <li>Animation-name</li>
-            <li>Animation-duration</li>
-            <li>Animation-timing-function</li>
-            <li>Animation-iteration-count</li>
-            <li>Animation-direction</li>
-            <li>Animation-delay</li>
-            <li>Animation-fill-mode</li>
-            <li>Animation-play-state</li>
-        </ul>
-        <li>Shorthand animation property</li>
-        <ul>
-            <li>List information in order above, separated with spaces, if declaring multiple animations, separate with
-                comma.&nbsp;</li>
+            <li>SetTimeout()</li>
+            <li>SetInterval()</li>
         </ul>
     </ul>
-    <p>Chapter 12: Canvas, SVG, and Drag and Drop</p>
+    <p>Chapter 14: HTML5 APIs</p>
     <ul>
-        <li>Canvas&nbsp;</li>
+        <li>Data-attribute</li>
         <ul>
-            <li>Set width and height in the canvas element</li>
-            <li>Starting to draw (in JS)</li>
+            <li>A way of embedding data in a web page using custom attributes that are ignored by the browser</li>
+            <li>Private on the page, so not intended to be used by an external service.</li>
+            <li>Attributes must be named using following format</li>
             <ul>
-                <li>Var canvas = document.getElementById(&ldquo;canvasId&rdquo;); var context =
-                    canvas.getContext(&ldquo;2d&rdquo;);</li>
+                <li>Start with &ldquo;data-&ldquo;</li>
+                <li>Contain only lowercase letters, numbers, hyphens, dots, colons, or underscores</li>
+                <li>Include an optional string value</li>
             </ul>
-            <li>Select Colors</li>
-            <ul>
-                <li>.strokeStyle</li>
-                <li>.fillStyle</li>
-                <li>.fillRect</li>
-                <li>.strokeRect</li>
-            </ul>
-            <li>Drawing a circle</li>
-            <ul>
-                <li>Context.beginPath(); context.arc(50,50,30,0, Math.PI*2, true); context.closePath;</li>
-                <li>Arc (x, y, radius, startAngle, endAngle, anticlockwise(t/f))</li>
-            </ul>
-            <li>Saving Canvas Drawings</li>
-            <li>Invisible to Screen Readers</li>
-            <li>Loads faster than SVG</li>
-            <li>Better than SVG if&nbsp;</li>
-            <ul>
-                <li>Painting pixels to the screen</li>
-                <li>No concerns about the ability to retrieve and modify your shapes</li>
-            </ul>
+            <li>Provide a convenient way of adding data directly into the HTML markup</li>
         </ul>
-        <li>SVG (Scalable Vector Graphics)</li>
+        <li>HTML APIs-&nbsp;</li>
         <ul>
-            <li>Drawing a circle</li>
-            <ul>
-                <li>&lt;svg&gt; &lt;circle cx=&ldquo;50&rdquo; cy=&ldquo;50&rdquo; r=&ldquo;25&rdquo;
-                    fill=&ldquo;color&rdquo;/&gt; &lt;/svg&gt;</li>
-            </ul>
-            <li>If you want a complex shape, you can use an image editor or free-use SVGs from online.</li>
-            <li>More accessible than canvas&nbsp;</li>
-            <li>Better than Canvas if</li>
-            <ul>
-                <li>Need the ability to access and change specific aspects of your graphics</li>
-            </ul>
+            <li>Web Storage</li>
+            <li>Geolocation</li>
+            <li>Web Workers</li>
         </ul>
-        <li>Drag and Drop&nbsp;</li>
+        <li>Drawing Shapes in Canvas</li>
         <ul>
-            <li>Two major kinds of functionality</li>
-            <ul>
-                <li>Dragging files from your computer into a web page</li>
-                <li>Dragging elements into other elements on the same page</li>
-            </ul>
-            <li>Adding Drag and Drop to Page</li>
-            <ul>
-                <li>Set the draggable attribute on any HTML elements you&rsquo;d like to be draggable.
-                    (Draggable=&ldquo;true&rdquo;)</li>
-                <li>Add an event listener for the dragstart event on any draggable HTML elements</li>
-                <li>Add an event listener for the drag lover and drop events on any elements that you want to have
-                    accept dropped items</li>
-            </ul>
+            <li>Accessing the canvas element in JavaScript</li>
+        </ul>
+        <li>Shims and Polyfills</li>
+        <ul>
+            <li>Libraries of code that allow you to use APIs as usual. They then fill in the necessary code that&rsquo;s
+                not provided natively by the user&rsquo;s browser.</li>
         </ul>
     </ul>
-    <h3><br /><br /><br /><br /><br /><br /><br /><br /></h3>
+    <h3><br /><br /></h3>
 </body>
 
 </html>
