@@ -47,3 +47,39 @@ kbd {
   letter-spacing: .1rem;
   color: #ffc600;
 }
+
+.move_10{
+  transform: translateY(10px);
+}
+
+.move_20{
+  transform: translateY(20px);
+}
+.move_30{
+  transform: translateY(30px);
+}
+
+.move_40{
+  transform: translateY(40px);
+}
+.move_50{
+  transform: translateY(50px);
+}
+
+.move_60{
+  transform: translateY(60px);
+}
+.move_70{
+  transform: translateY(70px);
+}
+
+.move_80{
+  transform: translateY(80px);
+}
+.move_90{
+  transform: translateY(90px);
+}
+
+.move_100{
+  transform: translateY(100px);
+}
