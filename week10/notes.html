@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Notes for Week 04, focuses on chapter 8, 12, and part of 15 from JavaScript Novice to Ninja.">
+    <title>Notes</title>
+    <link rel="stylesheet" href="../css/normalize.css" media="screen">
+    <link rel="stylesheet" href="../css/small.css" media="screen">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+</head>
+<!--This page has trouble validating in HTML because of my nested lists.-->
+
+<body>
+    <h1>Notes</h1>
+    <h2>Preparation</h2>
+    <hr>
+    <p>Chapter 9: The Window Object</p>
+    <ul>
+        <li>The Browser Object Model (BOM)</li>
+        <ul>
+            <li>A collection of properties and methods that contain information about the browser and computer screen
+            </li>
+            <li>In a browser environment that global object is the window object</li>
+            <li>Dialogs</li>
+            <ul>
+                <li>Alert(), confirm(), prompt()</li>
+            </ul>
+        </ul>
+        <li>Browser History</li>
+        <ul>
+            <li>Window.history can be used to access the information about any previously visited pages in the current
+                browser session</li>
+            <li>Add .length and you can see how many pages have been visited before the current page.</li>
+            <li>Add .go(#) to the original statement and you can navigate to other viewed pages.</li>
+        </ul>
+        <li>Controlling Windows</li>
+        <ul>
+            <li>Window.open opens another window, for example a pop up</li>
+            <li>Window.screen object contains information about the screen the browser is displayed on&nbsp;</li>
+        </ul>
+        <li>Cookies</li>
+        <ul>
+            <li>Small files saved locally</li>
+            <li>They can only be accessed by a web page with the same domain that set them.</li>
+            <li>Create a cookie</li>
+            <ul>
+                <li>Document.cookie = &hellip;</li>
+            </ul>
+        </ul>
+        <li>Timing Functions</li>
+        <ul>
+            <li>SetTimeout()</li>
+            <li>SetInterval()</li>
+        </ul>
+    </ul>
+    <p>Chapter 14: HTML5 APIs</p>
+    <ul>
+        <li>Data-attribute</li>
+        <ul>
+            <li>A way of embedding data in a web page using custom attributes that are ignored by the browser</li>
+            <li>Private on the page, so not intended to be used by an external service.</li>
+            <li>Attributes must be named using following format</li>
+            <ul>
+                <li>Start with &ldquo;data-&ldquo;</li>
+                <li>Contain only lowercase letters, numbers, hyphens, dots, colons, or underscores</li>
+                <li>Include an optional string value</li>
+            </ul>
+            <li>Provide a convenient way of adding data directly into the HTML markup</li>
+        </ul>
+        <li>HTML APIs-&nbsp;</li>
+        <ul>
+            <li>Web Storage</li>
+            <li>Geolocation</li>
+            <li>Web Workers</li>
+        </ul>
+        <li>Drawing Shapes in Canvas</li>
+        <ul>
+            <li>Accessing the canvas element in JavaScript</li>
+        </ul>
+        <li>Shims and Polyfills</li>
+        <ul>
+            <li>Libraries of code that allow you to use APIs as usual. They then fill in the necessary code that&rsquo;s
+                not provided natively by the user&rsquo;s browser.</li>
+        </ul>
+    </ul>
+    <h3><br /><br /></h3>
+</body>
+
+</html>
