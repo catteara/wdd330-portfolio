@@ -17,76 +17,58 @@
     <h1>Notes</h1>
     <h2>Preparation</h2>
     <hr>
-    <p>Chapter 9: The Window Object</p>
+    <p>MDN: Client-side Form Validation</p>
     <ul>
-        <li>The Browser Object Model (BOM)</li>
+        <li>Client-side validation is an initial check and an important feature of good user experience</li>
+        <li>If it gets to the server and is then rejected, a noticeable delay is caused by a round trip to the server
+            and then back to the client-side to tell the user to fix their data</li>
+        <li>Client-side validation is easy to get around, so server-side validation should also be used</li>
+        <li>Form Validation Examples</li>
         <ul>
-            <li>A collection of properties and methods that contain information about the browser and computer screen
-            </li>
-            <li>In a browser environment that global object is the window object</li>
-            <li>Dialogs</li>
+            <li>&ldquo;This field is required&rdquo;</li>
+            <li>&ldquo;Enter a valid email address&rdquo;</li>
+            <li>&ldquo;Passwords should include at least 8 characters and at least one special character&rdquo;</li>
+        </ul>
+        <li>Types of client-side validations</li>
+        <ul>
+            <li>Built-in form validation</li>
             <ul>
-                <li>Alert(), confirm(), prompt()</li>
+                <li>HTML form validation. Better performance than JavaScript, but less customizable</li>
+                <li>Examples</li>
+                <ul>
+                    <li>required</li>
+                    <li>minlength and maxlength- Constrains the length of entries</li>
+                    <li>min and max</li>
+                    <li>type- constrains the value of entries</li>
+                    <li>pattern- Pattern uses regular expression</li>
+                </ul>
             </ul>
-        </ul>
-        <li>Browser History</li>
-        <ul>
-            <li>Window.history can be used to access the information about any previously visited pages in the current
-                browser session</li>
-            <li>Add .length and you can see how many pages have been visited before the current page.</li>
-            <li>Add .go(#) to the original statement and you can navigate to other viewed pages.</li>
-        </ul>
-        <li>Controlling Windows</li>
-        <ul>
-            <li>Window.open opens another window, for example a pop up</li>
-            <li>Window.screen object contains information about the screen the browser is displayed on&nbsp;</li>
-        </ul>
-        <li>Cookies</li>
-        <ul>
-            <li>Small files saved locally</li>
-            <li>They can only be accessed by a web page with the same domain that set them.</li>
-            <li>Create a cookie</li>
+            <li>JavaScript</li>
             <ul>
-                <li>Document.cookie = &hellip;</li>
+                <li>Completely customizable, but you have to make it or use a library</li>
+                <li>Constraint validation API (you can also do it yourself)</li>
+                <li>Implementing customized error messages</li>
             </ul>
-        </ul>
-        <li>Timing Functions</li>
-        <ul>
-            <li>SetTimeout()</li>
-            <li>SetInterval()</li>
         </ul>
     </ul>
-    <p>Chapter 14: HTML5 APIs</p>
+    <p>MDN: Using Fetch</p>
     <ul>
-        <li>Data-attribute</li>
+        <li>Fetch APIs</li>
+        <li>Fetch example</li>
         <ul>
-            <li>A way of embedding data in a web page using custom attributes that are ignored by the browser</li>
-            <li>Private on the page, so not intended to be used by an external service.</li>
-            <li>Attributes must be named using following format</li>
-            <ul>
-                <li>Start with &ldquo;data-&ldquo;</li>
-                <li>Contain only lowercase letters, numbers, hyphens, dots, colons, or underscores</li>
-                <li>Include an optional string value</li>
-            </ul>
-            <li>Provide a convenient way of adding data directly into the HTML markup</li>
+            <li>fetch(url) .then(response =&gt; response.json()) .then(data =&gt; console.log(data));</li>
         </ul>
-        <li>HTML APIs-&nbsp;</li>
+        <li>Uploading JSON data</li>
+        <li>Uploading file(s)</li>
         <ul>
-            <li>Web Storage</li>
-            <li>Geolocation</li>
-            <li>Web Workers</li>
+            <li>&lt;input type=&rdquo;file&rdquo; /&gt;</li>
+            <li>&lt;input type=&rdquo;file&rdquo; multiple /&gt;</li>
         </ul>
-        <li>Drawing Shapes in Canvas</li>
-        <ul>
-            <li>Accessing the canvas element in JavaScript</li>
-        </ul>
-        <li>Shims and Polyfills</li>
-        <ul>
-            <li>Libraries of code that allow you to use APIs as usual. They then fill in the necessary code that&rsquo;s
-                not provided natively by the user&rsquo;s browser.</li>
-        </ul>
+        <li>Checking if a fetch is successful</li>
+        <li>Headers</li>
+        <li>Guard</li>
+        <li>Response objects</li>
     </ul>
-    <h3><br /><br /></h3>
 </body>
 
 </html>
