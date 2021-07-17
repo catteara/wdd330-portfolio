@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loot Generator</title>
+    <link rel="stylesheet" href="css/normalize.css" media="screen">
+    <link rel="stylesheet" href="css/small.css" media="screen">
+    <link rel="stylesheet" href="css/medium.css" media="screen">
+    <link rel="stylesheet" href="css/large.css" media="screen">
+    <!--<link rel="shortcut icon" href="../images/favicon.ico">-->
+    <script src="js/money.js"></script>
+    <script src="js/stuff.js"></script>
+    <script src="js/dice.js"></script>
+</head>
+<body>
+   <h1>Loot Generator</h1>
+   <h2>What do you want to include in your loot?</h2>
+   <form class="loot">
+    <label><input type="checkbox" id="copper" class="money" name="copper" value="Copper"> Copper</label>
+    <label><input type="checkbox" id="silver" class="money"  name="silver" value="Silver"> Silver</label>
+    <label><input type="checkbox" id="gold" class="money"  name="gold" value="Gold"> Gold</label>
+    <label><input type="checkbox" id="platinium" class="money"  name="platinium" value="Platinium"> Platinium</label>
+    <button id="generateLoot" class="button" title="Generate Loot" aria-label="Generate Loot" tabindex="0" onclick="money()">Generate Loot</button>
+   </form>
+   <div id="copperResult" class="result"></div>
+   <div id="silverResult" class="result"></div>
+   <div id="goldResult" class="result"></div>
+   <div id="platiniumResult" class="result"></div>
+
+   <form class="stuff">
+    <label><input type="checkbox" id="magic-items" name="magic-items" value="Magic Item"> Magic Item</label>
+    <label><input type="checkbox" id="spells" name="spells" value="Spell Scroll"> Spell Scroll</label>
+    <label><input type="checkbox" id="equipment" name="equipment" value="Equipment"> Equipment</label>
+    <button id="generateStuff" class="button" title="Generate Stuff" aria-label="Generate Stuff" tabindex="0" onclick="stuff()">Generate Stuff</button>
+   </form>
+   <div id="magic-itemsResult"></div>
+   <div id="spellsResult"></div>
+   <div id="equipmentResult"></div>
+    
+  <div class="dice">
+    <button class="button d100" title="d100" aria-label="Roll d100" tabindex="0" onclick="d100()">D100</button>
+    <div id="d100Result"></div>
+    <button class="button d20" title="d20" aria-label="Roll d20" tabindex="0" onclick="d20()">D20</button>
+    <div id="d20Result"></div>
+    <button class="button d12" title="d12" aria-label="Roll d12" tabindex="0" onclick="d12()">D12</button>
+    <div id="d12Result"></div>
+    <button class="button d10" title="d10" aria-label="Roll d10" tabindex="0" onclick="d10()">D10</button>
+    <div id="d10Result"></div>
+    <button class="button d8" title="d8" aria-label="Roll d8" tabindex="0" onclick="d8()">D8</button>
+    <div id="d8Result"></div>
+    <button class="button d6" title="d6" aria-label="Roll d6" tabindex="0" onclick="d6()">D6</button>
+    <div id="d6Result"></div>
+    <button class="button d4" title="d4" aria-label="Roll d4" tabindex="0" onclick="d4()">D4</button>
+    <div id="d4Result"></div>
+    <button class="button d2" title="d2" aria-label="Roll d2" tabindex="0" onclick="d2()">D2</button>
+    <div id="d2Result"></div>
+  </div>
+</body>
+</html>

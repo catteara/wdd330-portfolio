@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&family=Open+Sans:wght@300;600&display=swap');
+
+body {
+    font-family: "Open Sans", Verdana, Tahoma, sans-serif;
+    background-color: #FCF9EE;
+    color: #291F1E;
+}
+
+h1, h2 {
+    font-family: "Metamorphous", Times, serif;
+}
+
+label {
+    display: block;
+}
+
+.result {
+    text-transform: capitalize; 
+}
+
+/* Remove Later! */
+.dice {
+    display: none;
+}
