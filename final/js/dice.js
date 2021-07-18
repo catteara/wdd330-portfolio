@@ -1,9 +1,3 @@
-function d100() {
-    event.preventDefault();
-    const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-    document.getElementById('d100Result').innerHTML = 'Your D100 rolled a ' + random(1, 101);
-}
-
 function d20() {
     event.preventDefault();
     const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
@@ -38,10 +32,4 @@ function d4() {
     event.preventDefault();
     const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
     document.getElementById('d4Result').innerHTML = 'Your D4 rolled a ' + random(1, 5);
-}
-
-function d2() {
-    event.preventDefault();
-    const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-    document.getElementById('d2Result').innerHTML = 'Your D2 rolled a ' + random(1, 3);
 }

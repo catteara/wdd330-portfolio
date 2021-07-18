@@ -30,18 +30,17 @@
    <div id="platiniumResult" class="result"></div>
 
    <form class="stuff">
+    <label><input type="checkbox" id="equipment" name="equipment" value="Equipment"> Equipment</label>
     <label><input type="checkbox" id="magic-items" name="magic-items" value="Magic Item"> Magic Item</label>
     <label><input type="checkbox" id="spells" name="spells" value="Spell Scroll"> Spell Scroll</label>
-    <label><input type="checkbox" id="equipment" name="equipment" value="Equipment"> Equipment</label>
     <button id="generateStuff" class="button" title="Generate Stuff" aria-label="Generate Stuff" tabindex="0" onclick="stuff()">Generate Stuff</button>
    </form>
+   <div id="equipmentResult"></div>
    <div id="magic-itemsResult"></div>
    <div id="spellsResult"></div>
-   <div id="equipmentResult"></div>
-    
+   
+  
   <div class="dice">
-    <button class="button d100" title="d100" aria-label="Roll d100" tabindex="0" onclick="d100()">D100</button>
-    <div id="d100Result"></div>
     <button class="button d20" title="d20" aria-label="Roll d20" tabindex="0" onclick="d20()">D20</button>
     <div id="d20Result"></div>
     <button class="button d12" title="d12" aria-label="Roll d12" tabindex="0" onclick="d12()">D12</button>
@@ -54,8 +53,6 @@
     <div id="d6Result"></div>
     <button class="button d4" title="d4" aria-label="Roll d4" tabindex="0" onclick="d4()">D4</button>
     <div id="d4Result"></div>
-    <button class="button d2" title="d2" aria-label="Roll d2" tabindex="0" onclick="d2()">D2</button>
-    <div id="d2Result"></div>
   </div>
 </body>
 </html>
