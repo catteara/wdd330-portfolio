@@ -26,8 +26,14 @@ header {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: "Metamorphous", Times, serif;
+}
+
+h3 {
+    color: #FCF9EE;
+    font-weight: 500;
 }
 
 label {
