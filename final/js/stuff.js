@@ -1,35 +1,3 @@
-// function stuff() {
-//     // event.preventDefault();
-
-//     var stuffs = ["magicitems", "spells", "weapons"];
-//     var i = 0;
-    
-//     while ( i <= stuffs.length) {
-//     var numbers = ["239", "320", "38"];
-
-//     const link = stuffs[i];
-//     const requestURL = `https://www.dnd5eapi.co/api/${link}/`;
-//     fetch(requestURL)
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (jsonObject) {
-//             console.table(jsonObject);
-            
-
-//             if (document.getElementById(stuffs[i]) ) {
-//                 var next = jsonObject['results'];
-//                 var random = Math.floor(Math.random() * numbers[i]);
-//                 document.getElementById(stuffs[i]+'Result').innerHTML = next[random].name;
-//                 i++;
-//             } else {
-//                 document.getElementById(stuffs[i]+'Result').innerHTML = '';
-//                 i++;
-//             }
-//       })
-//     }
-// };
-
 function stuff() {
     event.preventDefault();
 

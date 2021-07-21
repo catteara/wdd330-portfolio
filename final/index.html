@@ -1,58 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loot Generator</title>
-    <link rel="stylesheet" href="css/normalize.css" media="screen">
-    <link rel="stylesheet" href="css/small.css" media="screen">
-    <link rel="stylesheet" href="css/medium.css" media="screen">
-    <link rel="stylesheet" href="css/large.css" media="screen">
-    <!--<link rel="shortcut icon" href="../images/favicon.ico">-->
-    <script src="js/money.js"></script>
-    <script src="js/stuff.js"></script>
-    <script src="js/dice.js"></script>
-</head>
-<body>
-   <h1>Loot Generator</h1>
-   <h2>What do you want to include in your loot?</h2>
-   <form class="loot">
-    <label><input type="checkbox" id="copper" class="money" name="copper" value="Copper"> Copper</label>
-    <label><input type="checkbox" id="silver" class="money"  name="silver" value="Silver"> Silver</label>
-    <label><input type="checkbox" id="gold" class="money"  name="gold" value="Gold"> Gold</label>
-    <label><input type="checkbox" id="platinium" class="money"  name="platinium" value="Platinium"> Platinium</label>
-    <button id="generateLoot" class="button" title="Generate Loot" aria-label="Generate Loot" tabindex="0" onclick="money()">Generate Loot</button>
-   </form>
-   <div id="copperResult" class="result"></div>
-   <div id="silverResult" class="result"></div>
-   <div id="goldResult" class="result"></div>
-   <div id="platiniumResult" class="result"></div>
 
-   <form class="stuff">
-    <label><input type="checkbox" id="equipment" name="equipment" value="Equipment"> Equipment</label>
-    <label><input type="checkbox" id="magic-items" name="magic-items" value="Magic Item"> Magic Item</label>
-    <label><input type="checkbox" id="spells" name="spells" value="Spell Scroll"> Spell Scroll</label>
-    <button id="generateStuff" class="button" title="Generate Stuff" aria-label="Generate Stuff" tabindex="0" onclick="stuff()">Generate Stuff</button>
-   </form>
-   <div id="equipmentResult"></div>
-   <div id="magic-itemsResult"></div>
-   <div id="spellsResult"></div>
-   
-  
-  <div class="dice">
-    <button class="button d20" title="d20" aria-label="Roll d20" tabindex="0" onclick="d20()">D20</button>
-    <div id="d20Result"></div>
-    <button class="button d12" title="d12" aria-label="Roll d12" tabindex="0" onclick="d12()">D12</button>
-    <div id="d12Result"></div>
-    <button class="button d10" title="d10" aria-label="Roll d10" tabindex="0" onclick="d10()">D10</button>
-    <div id="d10Result"></div>
-    <button class="button d8" title="d8" aria-label="Roll d8" tabindex="0" onclick="d8()">D8</button>
-    <div id="d8Result"></div>
-    <button class="button d6" title="d6" aria-label="Roll d6" tabindex="0" onclick="d6()">D6</button>
-    <div id="d6Result"></div>
-    <button class="button d4" title="d4" aria-label="Roll d4" tabindex="0" onclick="d4()">D4</button>
-    <div id="d4Result"></div>
-  </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="This is a generator made to give you a random selection of items and money for any Dungeon and Dragons 5th edition campaign.">
+  <title>Loot Generator</title>
+  <link rel="stylesheet" href="css/normalize.css" media="screen">
+  <link rel="stylesheet" href="css/small.css" media="screen">
+  <link rel="stylesheet" href="css/medium.css" media="screen">
+  <link rel="stylesheet" href="css/large.css" media="screen">
+  <!--<link rel="shortcut icon" href="../images/favicon.ico">-->
+  <script src="js/money.js"></script>
+  <script src="js/stuff.js"></script>
+  <script src="js/dice.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Loot Generator</h1>
+  </header>
+  <main>
+    <h2>What do you want to include in your loot?</h2>
+    <form class="loot">
+      <input type="checkbox" id="copper" class="money" name="copper" value="Copper">
+      <label for="copper"> Copper</label>
+      <input type="checkbox" id="silver" class="money" name="silver" value="Silver">
+      <label for="silver"> Silver</label>
+      <input type="checkbox" id="gold" class="money" name="gold" value="Gold">
+      <label for="gold">Gold</label>
+      <input type="checkbox" id="platinium" class="money" name="platinium" value="Platinium">
+      <label for="platinium">Platinium</label>
+      <button id="generateLoot" title="Generate Loot" aria-label="Generate Loot" tabindex="0" onclick="money()">
+        <img src="images/button.webp" alt="Money Button">
+        <span>Generate Money</span>
+      </button>
+    </form>
+    <div class="lootResult">
+      <p id="copperResult" class="result"></p>
+      <p id="silverResult" class="result"></p>
+      <p id="goldResult" class="result"></p>
+      <p id="platiniumResult" class="result"></p>
+    </div>
+
+    <form class="stuff">
+      <input type="checkbox" id="equipment" name="equipment" value="Equipment">
+      <label for="equipment"> Equipment</label>
+      <input type="checkbox" id="magic-items" name="magic-items" value="Magic Item">
+      <label for="magic-items"> Magic Item</label>
+      <input type="checkbox" id="spells" name="spells" value="Spell Scroll">       
+      <label for="spells"> Spell Scroll</label>
+      <button id="generateStuff" title="Generate Stuff" aria-label="Generate Stuff" tabindex="0" onclick="stuff()">
+        <img src="images/button.webp" alt="Generate Stuff">
+        <span>Generate Stuff</span>
+      </button>
+    </form>
+    <div class="stuffResult">
+      <p id="equipmentResult" class="result"></p>
+      <p id="magic-itemsResult" class="result"></p>
+      <p id="spellsResult" class="result"></p>
+    </div>
+  </main>
+  <footer>
+    <div class="dice">
+      <button class="button d20" title="d20" aria-label="Roll d20" tabindex="0" onclick="d20()">
+        <img src="images/d20.webp" alt="d20 dice" class="die">
+        <span id="d20Result" class="diceResult"></span>
+      </button>
+      <button class="button d12" title="d12" aria-label="Roll d12" tabindex="0" onclick="d12()">
+        <img src="images/d12.webp" alt="d12 dice" class="die">
+        <span id="d12Result" class="diceResult"></span>
+      </button>
+      <button class="button d10" title="d10" aria-label="Roll d10" tabindex="0" onclick="d10()">
+        <img src="images/d10.webp" alt="d10 dice" class="die">
+        <span id="d10Result" class="diceResult"></span>
+      </button>
+      <button class="button d8" title="d8" aria-label="Roll d8" tabindex="0" onclick="d8()">
+        <img src="images/d8.webp" alt="d8 dice" class="die">
+        <span id="d8Result" class="diceResult"></span>
+      </button>
+      <button class="button d6" title="d6" aria-label="Roll d6" tabindex="0" onclick="d6()">
+        <img src="images/d6.webp" alt="d6 dice" class="die">
+        <span id="d6Result" class="diceResult"></span>
+      </button>
+      <button class="button d4" title="d4" aria-label="Roll d4" tabindex="0" onclick="d4()">
+        <img src="images/d4.webp" alt="d4 dice" class="die">
+        <span id="d4Result" class="diceResult"></span>
+      </button>
+    </div>
+  </footer>
 </body>
+
 </html>

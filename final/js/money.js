@@ -6,7 +6,7 @@ function money() {
     while ( i <= options.length) {
         //TODO:add nested if statement to check if null before this step.
         if (document.getElementById(options[i]).checked ) {
-            document.getElementById(options[i]+'Result').innerHTML = options[i] + ' ' + Math.floor(Math.random() * numbers[i]);
+            document.getElementById(options[i]+'Result').innerHTML = options[i] + ': ' + Math.floor(Math.random() * numbers[i]);
             i++;
         } else {
             document.getElementById(options[i]+'Result').innerHTML = '';

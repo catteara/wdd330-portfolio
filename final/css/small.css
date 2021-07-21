@@ -2,11 +2,31 @@
 
 body {
     font-family: "Open Sans", Verdana, Tahoma, sans-serif;
+    font-weight: 600;
     background-color: #FCF9EE;
+    background-image: url(../images/background.png);
+    background-repeat: repeat;
     color: #291F1E;
 }
 
-h1, h2 {
+main,
+header {
+    max-width: 90%;
+    margin-left: 5%;
+}
+
+header {
+    color: #FCF9EE;
+    background-color: #2E414D;
+    text-align: center;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    padding: 20px 0;
+}
+
+h1,
+h2 {
     font-family: "Metamorphous", Times, serif;
 }
 
@@ -15,6 +35,118 @@ label {
 }
 
 .result {
-    text-transform: capitalize; 
+    text-transform: capitalize;
 }
 
+main button {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+
+main button img {
+    min-width: 250px;
+    max-width: 300px;
+    width: 100%;
+    background-color: #FCF9EE;
+    background: radial-gradient(ellipse at center, rgba(252,249,238,1) 0%, rgba(252,249,238,1) 40%, rgba(252,249,238,0) 100%);
+}
+
+main button:hover img {
+    filter: saturate(150%) brightness(1);
+}
+
+main button:hover span {
+    font-weight: 700;
+}
+
+main button span {
+    font-family: "Metamorphous", Times, serif;
+    color: #2E414D;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 300px;
+}
+
+footer {
+    background-color: #2E414D;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+}
+
+div.dice {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    border: none;
+    background-color: transparent;
+    filter: sepia(60%) brightness(3.5);
+    position: relative;
+    text-align: center;
+}
+
+.diceResult {
+    font-family: "Metamorphous", Times, serif;
+    font-weight: 700;
+    color: #2E414D;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#d10Result {
+    top: 40%;
+}
+
+#d8Result {
+    top: 48%;
+}
+
+#d6Result {
+    top: 56%;
+    left: 45%;
+}
+
+#d4Result {
+    top: 55%;
+}
+
+.button img {
+    width: 120px;
+}
+
+.button:hover {
+    filter: saturate(200%) contrast(200%) brightness(3.5) invert(100%);
+}
+
+.button:not(:active) {
+    transform: rotate(360deg);
+    transition: 1.5s ease all;
+}
+
+main input[type=checkbox] { 
+    opacity: 0;
+}
+
+main label {
+    padding-left: 30px;
+    display: flex;
+    width: auto;
+    height: 20px;
+    background-image: url(../images/unchecked.webp);    
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+main input:checked + label {
+    background-image: url(../images/checked.webp);    
+}
